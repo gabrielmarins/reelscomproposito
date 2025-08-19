@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reels com Propósito | A Experiência</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #050214;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(10, 5, 40, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: -webkit-linear-gradient(45deg, #C77DFF, #7F00FF, #5200CC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(199, 125, 255, 0.15), 0 0 10px rgba(127, 0, 255, 0.1);
+        }
+        .cta-gradient {
+            background-image: linear-gradient(to right, #8E2DE2, #4A00E0);
+        }
+        
+        /* Horizontal Scroll Section */
+        .scroll-wrapper { position: relative; }
+        .scroll-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+        .scroll-container::-webkit-scrollbar { display: none; }
+        .scroll-item { flex: 0 0 90%; scroll-snap-align: center; margin-right: 2.5%; }
+        @media (min-width: 768px) { .scroll-item { flex: 0 0 45%; } }
+        @media (min-width: 1024px) { .scroll-item { flex: 0 0 30%; } }
+        .scroll-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(10, 5, 40, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; z-index: 10; }
+        .scroll-wrapper:hover .scroll-arrow { opacity: 1; }
+        .scroll-arrow:hover { transform: translateY(-50%) scale(1.1); background: rgba(127, 0, 255, 0.5); }
+        .arrow-left { left: -20px; }
+        .arrow-right { right: -20px; }
+
+        /* 3D Tilt Effect */
+        .tilt-card { transition: transform 0.4s ease; transform-style: preserve-3d; }
+
+        /* IA Lab Styles */
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-left-color: #C77DFF;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-[#050214] text-[#E0E0E0]">
+
+    <div class="max-w-7xl mx-auto p-6 sm:p-12">
+
+        <!-- Boas-vindas -->
+        <header class="text-center my-16 md:my-24">
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight tracking-tighter">
+                <span class="text-gradient">🎉 Parabéns!</span> Você está prestes a transformar seus Reels em algo magnético.
+            </h1>
+            <p class="text-lg text-[#A0A0A0] mt-6 max-w-3xl mx-auto">Este espaço é seu laboratório criativo. Aqui você vai aplicar ideias, testar roteiros e sentir na prática a diferença que conteúdo estratégico faz.</p>
+            
+            <div class="glass-card p-8 mt-12 rounded-2xl shadow-2xl glow-effect max-w-4xl mx-auto">
+                <p class="text-lg leading-relaxed text-gray-300">
+                    “Você deu o primeiro passo. Agora, vamos transformar conhecimento em ação. Use este espaço para praticar, experimentar e criar seus primeiros Reels em até 24h. Quanto mais você aplicar, mais rápido verá resultados reais.”
+                </p>
+                <h3 class="font-bold text-white mt-8 mb-4">Seu Mapa de Navegação:</h3>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-left">
+                    <div class="text-sm border border-white/10 p-4 rounded-lg"><strong>1. Teoria:</strong> Leia a Introdução e os 5 Portais para entender a estratégia.</div>
+                    <div class="text-2xl text-purple-400">&rarr;</div>
+                    <div class="text-sm border border-white/10 p-4 rounded-lg"><strong>2. Prática:</strong> Use o Laboratório IA para gerar seu roteiro em minutos.</div>
+                    <div class="text-2xl text-purple-400">&rarr;</div>
+                    <div class="text-sm border border-white/10 p-4 rounded-lg"><strong>3. Ação:</strong> Publique seu Reel e observe o retorno.</div>
+                </div>
+                 <a href="https://www.instagram.com/gabrielbmarins/" target="_blank" class="mt-8 inline-block bg-purple-600/50 text-white font-bold py-3 px-6 rounded-lg text-base hover:bg-purple-600 transition duration-300 shadow-lg">
+                    Compartilhe seu primeiro Reels comigo no Instagram
+                </a>
+            </div>
+        </header>
+
+        <section class="mb-24">
+            <div class="glass-card p-8 md:p-12 rounded-2xl shadow-2xl glow-effect max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center text-white">A Ponte Entre a Sua Alma e o Seu Público</h2>
+                <p class="text-lg leading-relaxed text-gray-300 text-center">
+                    O seu talento é inegável, mas a conexão não acontece por acaso. Ela é construída. Este guia não é sobre marketing, é sobre <strong class="text-[#C77DFF]">arquitetura de ressonância</strong>. Vamos transformar o seu conteúdo numa ponte indestrutível entre a sua mensagem e quem precisa dela.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <h2 class="text-4xl font-bold mb-12 text-center text-white">Os 5 Portais de Conexão</h2>
+            <div class="scroll-wrapper">
+                <div id="scrollContainer" class="scroll-container pb-8">
+                    <!-- Cards aqui -->
+                    <div class="scroll-item"> <div class="tilt-card glass-card p-8 rounded-2xl h-full flex flex-col justify-between"> <div> <h3 class="text-2xl font-bold text-gradient mb-4">1. O Desabafo Consciente</h3> <p class="text-gray-400">Traduza o sentimento oculto do seu público em palavras. Crie um campo de empatia instantânea.</p> </div> <p class="mt-6 text-sm text-gray-500 italic"><strong>Exemplo:</strong> "Sentir-se um estranho no ninho pode ser o primeiro sinal de que você veio para construir um mundo novo."</p> </div> </div>
+                    <div class="scroll-item"> <div class="tilt-card glass-card p-8 rounded-2xl h-full flex flex-col justify-between"> <div> <h3 class="text-2xl font-bold text-gradient mb-4">2. A Sabedoria Curta</h3> <p class="text-gray-400">Destile o seu conhecimento numa pílula de clareza. Posicione-se como um farol, não como um professor.</p> </div> <p class="mt-6 text-sm text-gray-500 italic"><strong>Exemplo:</strong> "A sua energia não mente. O seu marketing também não deveria."</p> </div> </div>
+                    <div class="scroll-item"> <div class="tilt-card glass-card p-8 rounded-2xl h-full flex flex-col justify-between"> <div> <h3 class="text-2xl font-bold text-gradient mb-4">3. A Prova Social</h3> <p class="text-gray-400">Ilumine a jornada de transformação dos seus clientes. A história deles é o seu argumento mais forte.</p> </div> <p class="mt-6 text-sm text-gray-500 italic"><strong>Exemplo:</strong> "Ela chegou a pensar que era o fim. Três sessões depois, era o começo."</p> </div> </div>
+                    <div class="scroll-item"> <div class="tilt-card glass-card p-8 rounded-2xl h-full flex flex-col justify-between"> <div> <h3 class="text-2xl font-bold text-gradient mb-4">4. Os Bastidores Autênticos</h3> <p class="text-gray-400">Mostre o ritual, não apenas o resultado. Humanize a sua magia e crie uma intimidade inabalável.</p> </div> <p class="mt-6 text-sm text-gray-500 italic"><strong>Exemplo:</strong> "O silêncio antes de cada sessão é onde o verdadeiro trabalho acontece."</p> </div> </div>
+                    <div class="scroll-item"> <div class="tilt-card glass-card p-8 rounded-2xl h-full flex flex-col justify-between"> <div> <h3 class="text-2xl font-bold text-gradient mb-4">5. O Convite Claro</h3> <p class="text-gray-400">Depois de abrir os portais, mostre o caminho. Uma chamada para a ação não é um pedido, é uma direção.</p> </div> <p class="mt-6 text-sm text-gray-500 italic"><strong>Exemplo:</strong> "Se isto ressoou, o próximo passo é seu. O link na bio é a porta."</p> </div> </div>
+                </div>
+                <button id="scrollLeftBtn" class="scroll-arrow arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button id="scrollRightBtn" class="scroll-arrow arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            </div>
+        </section>
+
+        <!-- Exemplo Guiado -->
+        <section class="mb-24 max-w-4xl mx-auto">
+             <div class="glass-card p-8 md:p-10 rounded-2xl shadow-2xl glow-effect flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-white mb-4">Da Teoria à Realidade</h2>
+                    <p class="text-gray-300">Veja como um roteiro gerado pelo Laboratório IA virou um Reels real em menos de 24h. Acompanhe passo a passo como a ideia saiu da tela para engajamento real.</p>
+                </div>
+                <div class="md:w-1/2 w-full h-96 bg-black/50 rounded-lg border border-white/10 flex items-center justify-center">
+                    <p class="text-gray-500">[Vídeo curto ou GIF do Reels aqui]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- IA SCRIPT LAB -->
+        <section class="mb-24 max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center text-white">Laboratório de Roteiros IA</h2>
+            <div class="glass-card p-8 md:p-10 rounded-2xl shadow-2xl glow-effect relative">
+                <p class="text-gray-400 mb-6 text-center">Insira o tema do seu Reel e o seu público-alvo. A IA usará o Método 3C's para gerar um roteiro para si.</p>
+                
+                <div class="space-y-4">
+                    <textarea id="iaThemeInput" class="w-full bg-black/30 p-4 rounded-md border border-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-[#C77DFF] focus:outline-none transition" rows="3" placeholder="Ex: A importância de colocar limites para terapeutas holísticas que estão a começar..."></textarea>
+                    <button id="generateScriptBtn" class="cta-gradient w-full text-white font-bold py-3 px-6 rounded-lg text-lg hover:opacity-90 transition duration-300 flex items-center justify-center">
+                        <span id="btnText">Gerar Roteiro</span>
+                        <div id="loadingSpinner" class="spinner hidden ml-3"></div>
+                    </button>
+                </div>
+
+                <div id="scriptOutputWrapper" class="mt-8 hidden">
+                    <h3 class="text-2xl font-bold text-gradient mb-4">Seu Roteiro:</h3>
+                    <div id="scriptOutput" class="bg-black/30 p-6 rounded-md border border-white/10 text-gray-300 whitespace-pre-wrap"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Próximos Passos -->
+        <section class="mb-24 max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center text-white">🚀 E agora? Potencialize seus resultados!</h2>
+            <div class="glass-card p-8 md:p-10 rounded-2xl shadow-2xl glow-effect">
+                <p class="text-center text-gray-300 mb-8">“Se esse método já abriu sua visão para criar conteúdo com propósito, imagine o impacto de trabalhar também suas crenças limitantes no marketing. Mais clareza, mais consistência, mais conversão.”</p>
+                <div class="grid md:grid-cols-2 gap-6 text-center">
+                    <!-- Crenças -->
+                    <div class="bg-black/20 border border-white/10 p-6 rounded-lg">
+                        <p class="font-bold text-xl my-2">5 Crenças que Travaram Seu Marketing</p>
+                        <p class="text-sm text-gray-400 mb-4">Dissolva bloqueios e acelere resultados.</p>
+                        <a href="https://pay.kiwify.com.br/7VTOsYA" target="_blank" class="font-bold text-white bg-purple-600/80 py-2 px-5 rounded-md hover:bg-purple-600 transition">Quero desbloquear minhas crenças</a>
+                    </div>
+                    <!-- Comunidade -->
+                    <div class="bg-black/20 border border-white/10 p-6 rounded-lg flex flex-col justify-center">
+                        <p class="font-bold text-xl my-2">Comunidade CPROD</p>
+                        <p class="text-sm text-gray-400 mb-4">Acompanhamento contínuo e troca com outros criadores.</p>
+                        <span class="font-bold text-white bg-gray-600/50 py-2 px-5 rounded-md cursor-not-allowed">Em breve</span>
+                    </div>
+                </div>
+                <p class="text-center text-gray-200 mt-10 font-semibold">“Este espaço é seu para criar, experimentar e crescer. Mergulhe, pratique e transforme seu conteúdo ainda hoje!”</p>
+            </div>
+        </section>
+
+        <footer class="text-center mt-20 text-gray-600 text-sm">
+            <p>&copy; 2025 CPROD by Osara. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        // 3D Tilt Effect Script
+        const tiltCards = document.querySelectorAll('.tilt-card');
+        tiltCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const { width, height } = rect;
+                const rotateX = (y / height - 0.5) * -15;
+                const rotateY = (x / width - 0.5) * 15;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+            });
+        });
+
+        // Horizontal Scroll Buttons Script
+        const scrollContainer = document.getElementById('scrollContainer');
+        const scrollLeftBtn = document.getElementById('scrollLeftBtn');
+        const scrollRightBtn = document.getElementById('scrollRightBtn');
+        scrollLeftBtn.addEventListener('click', () => {
+            const scrollAmount = scrollContainer.querySelector('.scroll-item').clientWidth;
+            scrollContainer.scrollLeft -= scrollAmount;
+        });
+        scrollRightBtn.addEventListener('click', () => {
+            const scrollAmount = scrollContainer.querySelector('.scroll-item').clientWidth;
+            scrollContainer.scrollLeft += scrollAmount;
+        });
+
+        // IA Script Lab Logic
+        const generateBtn = document.getElementById('generateScriptBtn');
+        const btnText = document.getElementById('btnText');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        const themeInput = document.getElementById('iaThemeInput');
+        const outputWrapper = document.getElementById('scriptOutputWrapper');
+        const scriptOutput = document.getElementById('scriptOutput');
+
+        function formatScript(text) {
+            // Remove markdown bold and italics
+            let formattedText = text.replace(/\*\*(.*?)\*\*/g, '$1');
+            formattedText = formattedText.replace(/\*(.*?)\*/g, '$1');
+            
+            // Replace markdown list items with bullet points
+            formattedText = formattedText.replace(/^\s*-\s/gm, '• ');
+            formattedText = formattedText.replace(/^\s*\*\s/gm, '• ');
+
+            return formattedText;
+        }
+
+        generateBtn.addEventListener('click', async () => {
+            const userInput = themeInput.value;
+            if (!userInput.trim()) {
+                scriptOutput.textContent = "Por favor, insira um tema para o seu Reel.";
+                outputWrapper.classList.remove('hidden');
+                return;
+            }
+
+            btnText.textContent = 'A gerar...';
+            loadingSpinner.classList.remove('hidden');
+            generateBtn.disabled = true;
+            outputWrapper.classList.add('hidden');
+
+            const prompt = `
+                Crie um roteiro curto para vídeo vertical (até 1 minuto), no estilo dinâmico e envolvente, voltado para redes sociais como Instagram Reels e TikTok.
+
+                🎯 **Tema e Público:** ${userInput}
+
+                🎙 **Tom:** Profissional, visionário, confiante e acessível. Ritmo rápido, frases curtas e linguagem clara. Pode usar humor leve, metáforas e quebras de expectativa.
+
+                **Estrutura obrigatória (Método 3C's):**
+                - **Gancho (Clareza):** Uma frase contraintuitiva que define um problema ou visão.
+                - **Desenvolvimento (Consistência):** 3 a 5 bullets práticos que mostram o "como".
+                - **Fechamento (Conversão):** Uma CTA clara que transforma inspiração em ação.
+
+                **Extras:** Apenas frases curtas. Inclua exemplos simples. Insira uma quebra de expectativa.
+                **Formato de Saída:** Use títulos como "🎬 Gancho:", "💡 Desenvolvimento:", "🚀 Chamada para Ação:". Não use NENHUMA formatação markdown como asteriscos ou negrito.
+            `;
+
+            try {
+                let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                const payload = { contents: chatHistory };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API request failed with status ${response.status}`);
+                }
+
+                const result = await response.json();
+                
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const rawText = result.candidates[0].content.parts[0].text;
+                    scriptOutput.textContent = formatScript(rawText);
+                } else {
+                    scriptOutput.textContent = "Não foi possível gerar o roteiro. A resposta da IA estava vazia. Tente novamente.";
+                }
+                
+            } catch (error) {
+                console.error("Error calling AI:", error);
+                scriptOutput.textContent = "Ocorreu um erro ao gerar o roteiro. Por favor, tente novamente mais tarde.";
+            } finally {
+                btnText.textContent = 'Gerar Roteiro';
+                loadingSpinner.classList.add('hidden');
+                generateBtn.disabled = false;
+                outputWrapper.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
